@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 
-from workflow import Workflow, ICON_WEB, web
+from workflow import Workflow, ICON_WEB
 
 log = None
 
