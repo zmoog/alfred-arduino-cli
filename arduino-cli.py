@@ -9,6 +9,14 @@ from workflow import Workflow, ICON_WEB
 log = None
 
 
+class CommandExecutionFailed(Exception):
+    pass
+
+
+class CommandNotSupported(Exception):
+    pass
+
+
 def run_command(cmd):
     from invoke import run
     
@@ -16,7 +24,7 @@ def run_command(cmd):
 
     result = run(cmd, hide=True, warn=True)
     if not result.ok:
-        raise Exception(result.stdout)
+        raise CommandExecutionFailed(result.stdout)
 
     return json.loads(result.stdout)
 
@@ -41,7 +49,7 @@ class Handler:
         command = getattr(self, name, None)
         
         if not callable(command):
-            raise Exception("Command not supported")
+            raise CommandNotSupported("Command not supported")
     
         command()        
 
