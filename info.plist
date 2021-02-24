@@ -132,6 +132,104 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
+				<string>cli lib list</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching libs...</string>
+				<key>script</key>
+				<string>python arduino-cli.py lib list "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Shows a list of installed libraries.</string>
+				<key>title</key>
+				<string>cli lib list</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>0A1826D1-4A91-4603-ACCE-54F19D987D4B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>cli lib search</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching libs...</string>
+				<key>script</key>
+				<string>python arduino-cli.py lib search "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Searches for one or more libraries data.</string>
+				<key>title</key>
+				<string>cli lib search</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D63A6314-93D8-4E25-A5FB-998E013D0E76</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
 				<string>cli version</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -170,6 +268,13 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0A1826D1-4A91-4603-ACCE-54F19D987D4B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>315</integer>
+			<key>ypos</key>
+			<integer>365</integer>
+		</dict>
 		<key>13FF6B14-C467-4841-A4CB-27C669CB2A57</key>
 		<dict>
 			<key>xpos</key>
@@ -180,9 +285,16 @@
 		<key>D5D682FD-ED77-49C1-9AB4-119B5911ECDF</key>
 		<dict>
 			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>685</integer>
+		</dict>
+		<key>D63A6314-93D8-4E25-A5FB-998E013D0E76</key>
+		<dict>
+			<key>xpos</key>
 			<integer>315</integer>
 			<key>ypos</key>
-			<integer>385</integer>
+			<integer>515</integer>
 		</dict>
 		<key>E8431DA9-DCBE-4A5D-9DFA-47E0D899D73C</key>
 		<dict>
