@@ -114,6 +114,49 @@ class Handler:
         # Send the results to Alfred as XML
         self.wf.send_feedback()
 
+    def handle_lib_list(self):
+
+        # def wrapper():
+        # return run_command("lib list")
+
+        libs = run_command("lib list")
+
+        if self.args.query:
+            libs = self.wf.filter(self.args.query,
+                                  libs,
+                                  key=search_key_for_lib,
+                                  min_score=20)
+
+        for lib in libs:
+            library = lib["library"]
+            self.wf.add_item(title=library['name'] + "@" + library['version'],
+                        subtitle=library['sentence'],
+                        icon=ICON_WEB)
+
+        # Send the results to Alfred as XML
+        self.wf.send_feedback()
+
+    def handle_lib_search(self):
+
+        def wrapper():
+            return run_command("lib search").get("libraries", [])
+
+        libs = self.wf.cached_data('libs', wrapper, max_age=300)
+
+        if self.args.query:
+            libs = self.wf.filter(self.args.query,
+                                  libs,
+                                  key=search_key_for_lib2,
+                                  min_score=20)
+
+        for lib in libs:
+            # library = lib["library"]
+            self.wf.add_item(title=lib['name'] + "@" + lib['latest']['version'],
+                        subtitle=lib['latest']['sentence'])
+
+        # Send the results to Alfred as XML
+        self.wf.send_feedback()
+        
     def handle_version_none(self):
         
         version = run_command("version")
