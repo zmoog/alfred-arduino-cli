@@ -30,12 +30,31 @@ def run_command(cmd):
 
 
 def search_key_for_board(board):
-    elements = []
-    elements.append(board["name"])
-    elements.append(board["FQBN"])
-    return u" ".join(elements)
+    elements = [
+        board["name"],
+        board["FQBN"]
+    ]
+    return " ".join(elements)
+   
     
+def search_key_for_lib(lib):
+    elements = [
+        lib["library"]["name"],
+        lib["library"]["sentence"]
+    ]
+    return " ".join(elements)
+   
     
+def search_key_for_lib2(lib):
+    elements = [
+        lib["name"],
+        lib["latest"]["author"],
+        lib["latest"]["maintainer"],
+        lib["latest"]["sentence"]
+    ]
+    return " ".join(elements)
+        
+        
 class Handler:
 
     def __init__(self, args, wf):
@@ -72,6 +91,7 @@ class Handler:
 
         # Send the results to Alfred as XML
         self.wf.send_feedback()
+
         
     def handle_board_listall(self):
 
