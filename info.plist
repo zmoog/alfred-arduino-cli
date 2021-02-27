@@ -11,7 +11,7 @@
 	<key>createdby</key>
 	<string>Maurizio Branca</string>
 	<key>description</key>
-	<string>Use the Arduin CLI from Alfred</string>
+	<string>Use the Arduino CLI from Alfred</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -181,55 +181,6 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>cli lib search</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching libs...</string>
-				<key>script</key>
-				<string>python arduino-cli.py lib search "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Searches for one or more libraries data.</string>
-				<key>title</key>
-				<string>cli lib search</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>D63A6314-93D8-4E25-A5FB-998E013D0E76</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
 				<string>cli version</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -265,7 +216,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Python based Workflow to run the Arduino CLI from Alfred.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0A1826D1-4A91-4603-ACCE-54F19D987D4B</key>
@@ -285,28 +236,23 @@
 		<key>D5D682FD-ED77-49C1-9AB4-119B5911ECDF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
-			<key>ypos</key>
-			<integer>685</integer>
-		</dict>
-		<key>D63A6314-93D8-4E25-A5FB-998E013D0E76</key>
-		<dict>
-			<key>xpos</key>
 			<integer>315</integer>
 			<key>ypos</key>
-			<integer>515</integer>
+			<integer>505</integer>
 		</dict>
 		<key>E8431DA9-DCBE-4A5D-9DFA-47E0D899D73C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>310</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>225</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.16.0</string>
 	<key>webaddress</key>
-	<string>https://zmoog.dev</string>
+	<string>https://github.com/zmoog/alfred-arduino-cli/</string>
 </dict>
 </plist>
