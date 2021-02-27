@@ -1,1 +1,8 @@
+# IDEs
+.vscode
+
+# Python
 *.pyc
+
+# Temp files
+libs/*
